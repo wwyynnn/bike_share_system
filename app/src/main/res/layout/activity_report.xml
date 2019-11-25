@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Report">
+
+
+
+
+
+    <TextView
+        android:id="@+id/report_title"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:fontFamily="@font/hind_madurai_medium"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/report"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/specific_description"
+        android:layout_width="386dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="60dp"
+        android:background="#7EFFFFFF"
+        android:ems="10"
+        android:hint="Please enter specific description of damage parts."
+        android:paddingLeft="5dp"
+        android:paddingRight="1dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintStart_toStartOf="@+id/id_hint"
+        app:layout_constraintTop_toTopOf="@+id/checkBox_handlebar" />
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="373dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="58dp"
+        android:background="@drawable/shape"
+        android:text="Submit"
+        android:textColor="#FAFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/id_hint"
+        app:layout_constraintTop_toBottomOf="@+id/specific_description"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <EditText
+        android:id="@+id/report_id_txt"
+        android:layout_width="355dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        app:layout_constraintStart_toStartOf="@+id/id_hint"
+        app:layout_constraintTop_toTopOf="@+id/id_hint" />
+
+    <CheckBox
+        android:id="@+id/checkBox_wheel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:text="Wheel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/specific_description"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_lock"
+         />
+
+    <TextView
+        android:id="@+id/chose_part_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Please select damaged parts:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/id_hint"
+        app:layout_constraintTop_toBottomOf="@+id/report_id_txt"/>
+
+    <TextView
+        android:id="@+id/id_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:text="Please enter broken bike's id:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/report_title" />
+
+    <CheckBox
+        android:id="@+id/checkBox_pedal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="30dp"
+        android:text="Pedal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/specific_description"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_chain" />
+
+    <CheckBox
+        android:id="@+id/checkBox_chain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="30dp"
+        android:text="Chain"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_brake"
+        app:layout_constraintStart_toStartOf="@+id/specific_description"
+         />
+
+    <CheckBox
+        android:id="@+id/checkBox_brake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="24dp"
+        android:text="Brake"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/specific_description"
+        app:layout_constraintTop_toBottomOf="@+id/chose_part_txt" />
+
+    <CheckBox
+        android:id="@+id/checkBox_handlebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:text="Handlebar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/specific_description"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_wheel" />
+
+    <CheckBox
+        android:id="@+id/checkBox_lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp"
+        android:text="Lock"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/specific_description"
+        app:layout_constraintTop_toBottomOf="@+id/chose_part_txt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
